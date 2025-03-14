@@ -1,0 +1,1851 @@
+{
+  "contractName": "CallerContract",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "ReceivedNewRequestIdEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "oracleAddress",
+          "type": "address"
+        }
+      ],
+      "name": "newOracleAddressEvent",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_oracleInstanceAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setOracleInstanceAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "updateEthPrice",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"ReceivedNewRequestIdEvent\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"oracleAddress\",\"type\":\"address\"}],\"name\":\"newOracleAddressEvent\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_oracleInstanceAddress\",\"type\":\"address\"}],\"name\":\"setOracleInstanceAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"updateEthPrice\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/CallerContrat.sol\":\"CallerContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"openzeppelin-solidity/contracts/access/Ownable.sol\":{\"keccak256\":\"0x15e2d5bd4c28a88548074c54d220e8086f638a71ed07e6b3ba5a70066fcf458d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://90faf5851c02f9bd42c5bfb54d4f0421a2612f50ab80b2c4fa24fa3792071cc2\",\"dweb:/ipfs/QmRGM4F2PcGVF85aTfaA9YBhCHHDqrMhRjyp6fGeBTtirb\"]},\"openzeppelin-solidity/contracts/utils/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"project:/contracts/CallerContrat.sol\":{\"keccak256\":\"0xa016ca0e503733ac65afde1ee0434c45f666e6416f623d22acde527762f632eb\",\"urls\":[\"bzz-raw://9551a8822b970fc8e6b52b52162a87c6a196286bfccb8381bc13177f801a002a\",\"dweb:/ipfs/Qmccp3BDiMMbEsoX8VdC9QqXtn7gVsMTSuNPT3QkHTufYF\"]},\"project:/contracts/EthPriceOracleInterface.sol\":{\"keccak256\":\"0x5d62c617cbf1e4073effa6705f5237ec3e37afe1e1862032fc03db2aeafe7fda\",\"urls\":[\"bzz-raw://0c01e543142d3dfd2dbc23fa71be350c6ea66121c091529e733e4c968954ee52\",\"dweb:/ipfs/QmTcVaCPhxDJzA3PdhWqWK4gA7NLKnh4DxvK4fskr1L7iZ\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060006100216100c460201b60201c565b9050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508073ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3506100cc565b600033905090565b6107ec806100db6000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806323c7e4a21461005c578063715018a6146100665780638da5cb5b14610070578063e9e17a9e146100a4578063f2fde38b146100e8575b600080fd5b61006461012c565b005b61006e61023b565b005b6100786103a8565b604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100e6600480360360208110156100ba57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103d1565b005b61012a600480360360208110156100fe57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610596565b005b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166330c0b9ec6040518163ffffffff1660e01b8152600401602060405180830381600087803b15801561019857600080fd5b505af11580156101ac573d6000803e3d6000fd5b505050506040513d60208110156101c257600080fd5b8101908080519060200190929190505050905060016003600083815260200190815260200160002060006101000a81548160ff0219169083151502179055507f3ed150819af981e387450beb90ec379b8b322150dbb299d492b108c59a623e4b816040518082815260200191505060405180910390a150565b610243610788565b73ffffffffffffffffffffffffffffffffffffffff166102616103a8565b73ffffffffffffffffffffffffffffffffffffffff16146102ea576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff1660008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6103d9610788565b73ffffffffffffffffffffffffffffffffffffffff166103f76103a8565b73ffffffffffffffffffffffffffffffffffffffff1614610480576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b80600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055507f441e3b056b114797955165bd03bb8393fc1658a713f09225de4745a8d068bf7d600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a150565b61059e610788565b73ffffffffffffffffffffffffffffffffffffffff166105bc6103a8565b73ffffffffffffffffffffffffffffffffffffffff1614610645576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156106cb576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806107916026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff1660008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b60003390509056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a2646970667358221220307c6ab3a5de3a5ed5cfcd3902769a0b22ee3b8d45413da42202dee970bf312064736f6c634300060c0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806323c7e4a21461005c578063715018a6146100665780638da5cb5b14610070578063e9e17a9e146100a4578063f2fde38b146100e8575b600080fd5b61006461012c565b005b61006e61023b565b005b6100786103a8565b604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100e6600480360360208110156100ba57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103d1565b005b61012a600480360360208110156100fe57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610596565b005b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166330c0b9ec6040518163ffffffff1660e01b8152600401602060405180830381600087803b15801561019857600080fd5b505af11580156101ac573d6000803e3d6000fd5b505050506040513d60208110156101c257600080fd5b8101908080519060200190929190505050905060016003600083815260200190815260200160002060006101000a81548160ff0219169083151502179055507f3ed150819af981e387450beb90ec379b8b322150dbb299d492b108c59a623e4b816040518082815260200191505060405180910390a150565b610243610788565b73ffffffffffffffffffffffffffffffffffffffff166102616103a8565b73ffffffffffffffffffffffffffffffffffffffff16146102ea576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff1660008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6103d9610788565b73ffffffffffffffffffffffffffffffffffffffff166103f76103a8565b73ffffffffffffffffffffffffffffffffffffffff1614610480576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b80600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055507f441e3b056b114797955165bd03bb8393fc1658a713f09225de4745a8d068bf7d600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a150565b61059e610788565b73ffffffffffffffffffffffffffffffffffffffff166105bc6103a8565b73ffffffffffffffffffffffffffffffffffffffff1614610645576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156106cb576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806107916026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff1660008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b60003390509056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a2646970667358221220307c6ab3a5de3a5ed5cfcd3902769a0b22ee3b8d45413da42202dee970bf312064736f6c634300060c0033",
+  "immutableReferences": {},
+  "sourceMap": "135:710:2:-:0;;;;;;;;;;;;;884:17:0;904:12;:10;;;:12;;:::i;:::-;884:32;;935:9;926:6;;:18;;;;;;;;;;;;;;;;;;992:9;959:43;;988:1;959:43;;;;;;;;;;;;850:159;135:710:2;;598:104:1;651:15;685:10;678:17;;598:104;:::o;135:710:2:-;;;;;;;",
+  "deployedSourceMap": "135:710:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;670:172;;;:::i;:::-;;1717:145:0;;;:::i;:::-;;1085:85;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;410:254:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;2011:240:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;670:172:2;713:10;726:14;;;;;;;;;;;:32;;;:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;713:47;;787:4;770:10;:14;781:2;770:14;;;;;;;;;;;;:21;;;;;;;;;;;;;;;;;;806:29;832:2;806:29;;;;;;;;;;;;;;;;;;670:172;:::o;1717:145:0:-;1308:12;:10;:12::i;:::-;1297:23;;:7;:5;:7::i;:::-;:23;;;1289:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1823:1:::1;1786:40;;1807:6;::::0;::::1;;;;;;;;1786:40;;;;;;;;;;;;1853:1;1836:6:::0;::::1;:19;;;;;;;;;;;;;;;;;;1717:145::o:0;1085:85::-;1131:7;1157:6;;;;;;;;;;;1150:13;;1085:85;:::o;410:254:2:-;1308:12:0;:10;:12::i;:::-;1297:23;;:7;:5;:7::i;:::-;:23;;;1289:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;519:22:2::1;503:13;;:38;;;;;;;;;;;;;;;;;;592:13;;;;;;;;;;;551:14;;:55;;;;;;;;;;;;;;;;;;621:36;643:13;;;;;;;;;;;621:36;;;;;;;;;;;;;;;;;;;;410:254:::0;:::o;2011:240:0:-;1308:12;:10;:12::i;:::-;1297:23;;:7;:5;:7::i;:::-;:23;;;1289:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2119:1:::1;2099:22;;:8;:22;;;;2091:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2208:8;2179:38;;2200:6;::::0;::::1;;;;;;;;2179:38;;;;;;;;;;;;2236:8;2227:6;::::0;:17:::1;;;;;;;;;;;;;;;;;;2011:240:::0;:::o;598:104:1:-;651:15;685:10;678:17;;598:104;:::o",
+  "source": "pragma solidity >=0.6.0 <0.8.0;\n\nimport \"./EthPriceOracleInterface.sol\";\nimport \"openzeppelin-solidity/contracts/access/Ownable.sol\";\n\ncontract CallerContract is Ownable{\n    EthPriceOracleInterface private oracleInstance;\n    address private oracleAddress;\n    mapping(uint256 => bool) myRequests;\n\n    event newOracleAddressEvent(address oracleAddress);\n    event ReceivedNewRequestIdEvent(uint256 id);\n\n    function setOracleInstanceAddress(address _oracleInstanceAddress) public onlyOwner {\n        oracleAddress = _oracleInstanceAddress;\n        oracleInstance = EthPriceOracleInterface(oracleAddress);\n        emit newOracleAddressEvent(oracleAddress);\n    }\n\n    function updateEthPrice() public {\n        uint256 id = oracleInstance.getLatestEthPrice();\n        myRequests[id] = true;\n        emit ReceivedNewRequestIdEvent(id);\n    }\n\n}",
+  "sourcePath": "/home/yannig-dev/Documents/EthPriceOracle/caller/contracts/CallerContrat.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/CallerContrat.sol",
+    "exportedSymbols": {
+      "CallerContract": [
+        197
+      ]
+    },
+    "id": 198,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 134,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:2"
+      },
+      {
+        "absolutePath": "project:/contracts/EthPriceOracleInterface.sol",
+        "file": "./EthPriceOracleInterface.sol",
+        "id": 135,
+        "nodeType": "ImportDirective",
+        "scope": 198,
+        "sourceUnit": 206,
+        "src": "33:39:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/access/Ownable.sol",
+        "file": "openzeppelin-solidity/contracts/access/Ownable.sol",
+        "id": 136,
+        "nodeType": "ImportDirective",
+        "scope": 198,
+        "sourceUnit": 110,
+        "src": "73:60:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 137,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 109,
+              "src": "162:7:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$109",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 138,
+            "nodeType": "InheritanceSpecifier",
+            "src": "162:7:2"
+          }
+        ],
+        "contractDependencies": [
+          109,
+          132
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 197,
+        "linearizedBaseContracts": [
+          197,
+          109,
+          132
+        ],
+        "name": "CallerContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 140,
+            "mutability": "mutable",
+            "name": "oracleInstance",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 197,
+            "src": "175:46:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_EthPriceOracleInterface_$205",
+              "typeString": "contract EthPriceOracleInterface"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 139,
+              "name": "EthPriceOracleInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 205,
+              "src": "175:23:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EthPriceOracleInterface_$205",
+                "typeString": "contract EthPriceOracleInterface"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 142,
+            "mutability": "mutable",
+            "name": "oracleAddress",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 197,
+            "src": "227:29:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 141,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "227:7:2",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 146,
+            "mutability": "mutable",
+            "name": "myRequests",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 197,
+            "src": "262:35:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_bool_$",
+              "typeString": "mapping(uint256 => bool)"
+            },
+            "typeName": {
+              "id": 145,
+              "keyType": {
+                "id": 143,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "270:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "262:24:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_bool_$",
+                "typeString": "mapping(uint256 => bool)"
+              },
+              "valueType": {
+                "id": 144,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "281:4:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 150,
+            "name": "newOracleAddressEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 149,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 148,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "oracleAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 150,
+                  "src": "332:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 147,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "332:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "331:23:2"
+            },
+            "src": "304:51:2"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 154,
+            "name": "ReceivedNewRequestIdEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 153,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 152,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 154,
+                  "src": "392:10:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 151,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "392:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "391:12:2"
+            },
+            "src": "360:44:2"
+          },
+          {
+            "body": {
+              "id": 175,
+              "nodeType": "Block",
+              "src": "493:171:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 163,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 161,
+                      "name": "oracleAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 142,
+                      "src": "503:13:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 162,
+                      "name": "_oracleInstanceAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 156,
+                      "src": "519:22:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "503:38:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 164,
+                  "nodeType": "ExpressionStatement",
+                  "src": "503:38:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 169,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 165,
+                      "name": "oracleInstance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 140,
+                      "src": "551:14:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_EthPriceOracleInterface_$205",
+                        "typeString": "contract EthPriceOracleInterface"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 167,
+                          "name": "oracleAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 142,
+                          "src": "592:13:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 166,
+                        "name": "EthPriceOracleInterface",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 205,
+                        "src": "568:23:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_EthPriceOracleInterface_$205_$",
+                          "typeString": "type(contract EthPriceOracleInterface)"
+                        }
+                      },
+                      "id": 168,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "568:38:2",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_EthPriceOracleInterface_$205",
+                        "typeString": "contract EthPriceOracleInterface"
+                      }
+                    },
+                    "src": "551:55:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_EthPriceOracleInterface_$205",
+                      "typeString": "contract EthPriceOracleInterface"
+                    }
+                  },
+                  "id": 170,
+                  "nodeType": "ExpressionStatement",
+                  "src": "551:55:2"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 172,
+                        "name": "oracleAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 142,
+                        "src": "643:13:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 171,
+                      "name": "newOracleAddressEvent",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 150,
+                      "src": "621:21:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 173,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "621:36:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 174,
+                  "nodeType": "EmitStatement",
+                  "src": "616:41:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "e9e17a9e",
+            "id": 176,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 159,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 158,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 58,
+                  "src": "483:9:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "483:9:2"
+              }
+            ],
+            "name": "setOracleInstanceAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 157,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 156,
+                  "mutability": "mutable",
+                  "name": "_oracleInstanceAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 176,
+                  "src": "444:30:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 155,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "444:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "443:32:2"
+            },
+            "returnParameters": {
+              "id": 160,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "493:0:2"
+            },
+            "scope": 197,
+            "src": "410:254:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 195,
+              "nodeType": "Block",
+              "src": "703:139:2",
+              "statements": [
+                {
+                  "assignments": [
+                    180
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 180,
+                      "mutability": "mutable",
+                      "name": "id",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 195,
+                      "src": "713:10:2",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 179,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "713:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 184,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 181,
+                        "name": "oracleInstance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 140,
+                        "src": "726:14:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_EthPriceOracleInterface_$205",
+                          "typeString": "contract EthPriceOracleInterface"
+                        }
+                      },
+                      "id": 182,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getLatestEthPrice",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 204,
+                      "src": "726:32:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_uint256_$",
+                        "typeString": "function () external returns (uint256)"
+                      }
+                    },
+                    "id": 183,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "726:34:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "713:47:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 189,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 185,
+                        "name": "myRequests",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 146,
+                        "src": "770:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_bool_$",
+                          "typeString": "mapping(uint256 => bool)"
+                        }
+                      },
+                      "id": 187,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 186,
+                        "name": "id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 180,
+                        "src": "781:2:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "770:14:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 188,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "787:4:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "770:21:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 190,
+                  "nodeType": "ExpressionStatement",
+                  "src": "770:21:2"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 192,
+                        "name": "id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 180,
+                        "src": "832:2:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 191,
+                      "name": "ReceivedNewRequestIdEvent",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 154,
+                      "src": "806:25:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 193,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "806:29:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 194,
+                  "nodeType": "EmitStatement",
+                  "src": "801:34:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "23c7e4a2",
+            "id": 196,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateEthPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 177,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "693:2:2"
+            },
+            "returnParameters": {
+              "id": 178,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "703:0:2"
+            },
+            "scope": 197,
+            "src": "670:172:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 198,
+        "src": "135:710:2"
+      }
+    ],
+    "src": "0:845:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/CallerContrat.sol",
+      "exportedSymbols": {
+        "CallerContract": [
+          197
+        ]
+      },
+      "license": null
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.6",
+            ".0",
+            "<",
+            "0.8",
+            ".0"
+          ]
+        },
+        "id": 134,
+        "name": "PragmaDirective",
+        "src": "0:31:2"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 206,
+          "absolutePath": "project:/contracts/EthPriceOracleInterface.sol",
+          "file": "./EthPriceOracleInterface.sol",
+          "scope": 198,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 135,
+        "name": "ImportDirective",
+        "src": "33:39:2"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 110,
+          "absolutePath": "openzeppelin-solidity/contracts/access/Ownable.sol",
+          "file": "openzeppelin-solidity/contracts/access/Ownable.sol",
+          "scope": 198,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 136,
+        "name": "ImportDirective",
+        "src": "73:60:2"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "contractDependencies": [
+            109,
+            132
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            197,
+            109,
+            132
+          ],
+          "name": "CallerContract",
+          "scope": 198
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Ownable",
+                  "referencedDeclaration": 109,
+                  "type": "contract Ownable"
+                },
+                "id": 137,
+                "name": "UserDefinedTypeName",
+                "src": "162:7:2"
+              }
+            ],
+            "id": 138,
+            "name": "InheritanceSpecifier",
+            "src": "162:7:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "oracleInstance",
+              "overrides": null,
+              "scope": 197,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract EthPriceOracleInterface",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "EthPriceOracleInterface",
+                  "referencedDeclaration": 205,
+                  "type": "contract EthPriceOracleInterface"
+                },
+                "id": 139,
+                "name": "UserDefinedTypeName",
+                "src": "175:23:2"
+              }
+            ],
+            "id": 140,
+            "name": "VariableDeclaration",
+            "src": "175:46:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "oracleAddress",
+              "overrides": null,
+              "scope": 197,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 141,
+                "name": "ElementaryTypeName",
+                "src": "227:7:2"
+              }
+            ],
+            "id": 142,
+            "name": "VariableDeclaration",
+            "src": "227:29:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "myRequests",
+              "overrides": null,
+              "scope": 197,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => bool)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => bool)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 143,
+                    "name": "ElementaryTypeName",
+                    "src": "270:7:2"
+                  },
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 144,
+                    "name": "ElementaryTypeName",
+                    "src": "281:4:2"
+                  }
+                ],
+                "id": 145,
+                "name": "Mapping",
+                "src": "262:24:2"
+              }
+            ],
+            "id": 146,
+            "name": "VariableDeclaration",
+            "src": "262:35:2"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "newOracleAddressEvent"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "oracleAddress",
+                      "overrides": null,
+                      "scope": 150,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 147,
+                        "name": "ElementaryTypeName",
+                        "src": "332:7:2"
+                      }
+                    ],
+                    "id": 148,
+                    "name": "VariableDeclaration",
+                    "src": "332:21:2"
+                  }
+                ],
+                "id": 149,
+                "name": "ParameterList",
+                "src": "331:23:2"
+              }
+            ],
+            "id": 150,
+            "name": "EventDefinition",
+            "src": "304:51:2"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "ReceivedNewRequestIdEvent"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "id",
+                      "overrides": null,
+                      "scope": 154,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 151,
+                        "name": "ElementaryTypeName",
+                        "src": "392:7:2"
+                      }
+                    ],
+                    "id": 152,
+                    "name": "VariableDeclaration",
+                    "src": "392:10:2"
+                  }
+                ],
+                "id": 153,
+                "name": "ParameterList",
+                "src": "391:12:2"
+              }
+            ],
+            "id": 154,
+            "name": "EventDefinition",
+            "src": "360:44:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "e9e17a9e",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "setOracleInstanceAddress",
+              "overrides": null,
+              "scope": 197,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_oracleInstanceAddress",
+                      "overrides": null,
+                      "scope": 176,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 155,
+                        "name": "ElementaryTypeName",
+                        "src": "444:7:2"
+                      }
+                    ],
+                    "id": 156,
+                    "name": "VariableDeclaration",
+                    "src": "444:30:2"
+                  }
+                ],
+                "id": 157,
+                "name": "ParameterList",
+                "src": "443:32:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 160,
+                "name": "ParameterList",
+                "src": "493:0:2"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 58,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 158,
+                    "name": "Identifier",
+                    "src": "483:9:2"
+                  }
+                ],
+                "id": 159,
+                "name": "ModifierInvocation",
+                "src": "483:9:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 142,
+                              "type": "address",
+                              "value": "oracleAddress"
+                            },
+                            "id": 161,
+                            "name": "Identifier",
+                            "src": "503:13:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 156,
+                              "type": "address",
+                              "value": "_oracleInstanceAddress"
+                            },
+                            "id": 162,
+                            "name": "Identifier",
+                            "src": "519:22:2"
+                          }
+                        ],
+                        "id": 163,
+                        "name": "Assignment",
+                        "src": "503:38:2"
+                      }
+                    ],
+                    "id": 164,
+                    "name": "ExpressionStatement",
+                    "src": "503:38:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract EthPriceOracleInterface"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 140,
+                              "type": "contract EthPriceOracleInterface",
+                              "value": "oracleInstance"
+                            },
+                            "id": 165,
+                            "name": "Identifier",
+                            "src": "551:14:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "contract EthPriceOracleInterface",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_address",
+                                      "typeString": "address"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 205,
+                                  "type": "type(contract EthPriceOracleInterface)",
+                                  "value": "EthPriceOracleInterface"
+                                },
+                                "id": 166,
+                                "name": "Identifier",
+                                "src": "568:23:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 142,
+                                  "type": "address",
+                                  "value": "oracleAddress"
+                                },
+                                "id": 167,
+                                "name": "Identifier",
+                                "src": "592:13:2"
+                              }
+                            ],
+                            "id": 168,
+                            "name": "FunctionCall",
+                            "src": "568:38:2"
+                          }
+                        ],
+                        "id": 169,
+                        "name": "Assignment",
+                        "src": "551:55:2"
+                      }
+                    ],
+                    "id": 170,
+                    "name": "ExpressionStatement",
+                    "src": "551:55:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 150,
+                              "type": "function (address)",
+                              "value": "newOracleAddressEvent"
+                            },
+                            "id": 171,
+                            "name": "Identifier",
+                            "src": "621:21:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 142,
+                              "type": "address",
+                              "value": "oracleAddress"
+                            },
+                            "id": 172,
+                            "name": "Identifier",
+                            "src": "643:13:2"
+                          }
+                        ],
+                        "id": 173,
+                        "name": "FunctionCall",
+                        "src": "621:36:2"
+                      }
+                    ],
+                    "id": 174,
+                    "name": "EmitStatement",
+                    "src": "616:41:2"
+                  }
+                ],
+                "id": 175,
+                "name": "Block",
+                "src": "493:171:2"
+              }
+            ],
+            "id": 176,
+            "name": "FunctionDefinition",
+            "src": "410:254:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "23c7e4a2",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "updateEthPrice",
+              "overrides": null,
+              "scope": 197,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 177,
+                "name": "ParameterList",
+                "src": "693:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 178,
+                "name": "ParameterList",
+                "src": "703:0:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        180
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "mutability": "mutable",
+                          "name": "id",
+                          "overrides": null,
+                          "scope": 195,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint256",
+                              "type": "uint256"
+                            },
+                            "id": 179,
+                            "name": "ElementaryTypeName",
+                            "src": "713:7:2"
+                          }
+                        ],
+                        "id": 180,
+                        "name": "VariableDeclaration",
+                        "src": "713:10:2"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "getLatestEthPrice",
+                              "referencedDeclaration": 204,
+                              "type": "function () external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 140,
+                                  "type": "contract EthPriceOracleInterface",
+                                  "value": "oracleInstance"
+                                },
+                                "id": 181,
+                                "name": "Identifier",
+                                "src": "726:14:2"
+                              }
+                            ],
+                            "id": 182,
+                            "name": "MemberAccess",
+                            "src": "726:32:2"
+                          }
+                        ],
+                        "id": 183,
+                        "name": "FunctionCall",
+                        "src": "726:34:2"
+                      }
+                    ],
+                    "id": 184,
+                    "name": "VariableDeclarationStatement",
+                    "src": "713:47:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 146,
+                                  "type": "mapping(uint256 => bool)",
+                                  "value": "myRequests"
+                                },
+                                "id": 185,
+                                "name": "Identifier",
+                                "src": "770:10:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 180,
+                                  "type": "uint256",
+                                  "value": "id"
+                                },
+                                "id": 186,
+                                "name": "Identifier",
+                                "src": "781:2:2"
+                              }
+                            ],
+                            "id": 187,
+                            "name": "IndexAccess",
+                            "src": "770:14:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 188,
+                            "name": "Literal",
+                            "src": "787:4:2"
+                          }
+                        ],
+                        "id": 189,
+                        "name": "Assignment",
+                        "src": "770:21:2"
+                      }
+                    ],
+                    "id": 190,
+                    "name": "ExpressionStatement",
+                    "src": "770:21:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 154,
+                              "type": "function (uint256)",
+                              "value": "ReceivedNewRequestIdEvent"
+                            },
+                            "id": 191,
+                            "name": "Identifier",
+                            "src": "806:25:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 180,
+                              "type": "uint256",
+                              "value": "id"
+                            },
+                            "id": 192,
+                            "name": "Identifier",
+                            "src": "832:2:2"
+                          }
+                        ],
+                        "id": 193,
+                        "name": "FunctionCall",
+                        "src": "806:29:2"
+                      }
+                    ],
+                    "id": 194,
+                    "name": "EmitStatement",
+                    "src": "801:34:2"
+                  }
+                ],
+                "id": 195,
+                "name": "Block",
+                "src": "703:139:2"
+              }
+            ],
+            "id": 196,
+            "name": "FunctionDefinition",
+            "src": "670:172:2"
+          }
+        ],
+        "id": 197,
+        "name": "ContractDefinition",
+        "src": "135:710:2"
+      }
+    ],
+    "id": 198,
+    "name": "SourceUnit",
+    "src": "0:845:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2025-03-14T17:45:19.656Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
