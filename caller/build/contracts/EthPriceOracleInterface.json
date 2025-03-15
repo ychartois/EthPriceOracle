@@ -27,15 +27,15 @@
     "absolutePath": "project:/contracts/EthPriceOracleInterface.sol",
     "exportedSymbols": {
       "EthPriceOracleInterface": [
-        177
+        377
       ]
     },
-    "id": 178,
+    "id": 378,
     "license": null,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 171,
+        "id": 371,
         "literals": [
           "solidity",
           ">=",
@@ -46,7 +46,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:31:3"
+        "src": "0:31:5"
       },
       {
         "abstract": true,
@@ -55,9 +55,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 177,
+        "id": 377,
         "linearizedBaseContracts": [
-          177
+          377
         ],
         "name": "EthPriceOracleInterface",
         "nodeType": "ContractDefinition",
@@ -66,7 +66,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "30c0b9ec",
-            "id": 176,
+            "id": 376,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -74,24 +74,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 172,
+              "id": 372,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "107:2:3"
+              "src": "107:2:5"
             },
             "returnParameters": {
-              "id": 175,
+              "id": 375,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 174,
+                  "id": 374,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 176,
-                  "src": "134:7:3",
+                  "scope": 376,
+                  "src": "134:7:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -99,10 +99,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 173,
+                    "id": 373,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "134:7:3",
+                    "src": "134:7:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -112,27 +112,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "133:9:3"
+              "src": "133:9:5"
             },
-            "scope": 177,
-            "src": "81:62:3",
+            "scope": 377,
+            "src": "81:62:5",
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "public"
           }
         ],
-        "scope": 178,
-        "src": "33:112:3"
+        "scope": 378,
+        "src": "33:112:5"
       }
     ],
-    "src": "0:145:3"
+    "src": "0:145:5"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/EthPriceOracleInterface.sol",
       "exportedSymbols": {
         "EthPriceOracleInterface": [
-          177
+          377
         ]
       },
       "license": null
@@ -150,9 +150,9 @@
             ".0"
           ]
         },
-        "id": 171,
+        "id": 371,
         "name": "PragmaDirective",
-        "src": "0:31:3"
+        "src": "0:31:5"
       },
       {
         "attributes": {
@@ -167,10 +167,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            177
+            377
           ],
           "name": "EthPriceOracleInterface",
-          "scope": 178
+          "scope": 378
         },
         "children": [
           {
@@ -186,7 +186,7 @@
               ],
               "name": "getLatestEthPrice",
               "overrides": null,
-              "scope": 177,
+              "scope": 377,
               "stateMutability": "nonpayable",
               "virtual": true,
               "visibility": "public"
@@ -199,9 +199,9 @@
                   ]
                 },
                 "children": [],
-                "id": 172,
+                "id": 372,
                 "name": "ParameterList",
-                "src": "107:2:3"
+                "src": "107:2:5"
               },
               {
                 "children": [
@@ -211,7 +211,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 176,
+                      "scope": 376,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -224,34 +224,34 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 173,
+                        "id": 373,
                         "name": "ElementaryTypeName",
-                        "src": "134:7:3"
+                        "src": "134:7:5"
                       }
                     ],
-                    "id": 174,
+                    "id": 374,
                     "name": "VariableDeclaration",
-                    "src": "134:7:3"
+                    "src": "134:7:5"
                   }
                 ],
-                "id": 175,
+                "id": 375,
                 "name": "ParameterList",
-                "src": "133:9:3"
+                "src": "133:9:5"
               }
             ],
-            "id": 176,
+            "id": 376,
             "name": "FunctionDefinition",
-            "src": "81:62:3"
+            "src": "81:62:5"
           }
         ],
-        "id": 177,
+        "id": 377,
         "name": "ContractDefinition",
-        "src": "33:112:3"
+        "src": "33:112:5"
       }
     ],
-    "id": 178,
+    "id": 378,
     "name": "SourceUnit",
-    "src": "0:145:3"
+    "src": "0:145:5"
   },
   "compiler": {
     "name": "solc",
@@ -259,7 +259,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.16",
-  "updatedAt": "2025-03-14T17:34:37.485Z",
+  "updatedAt": "2025-03-15T13:11:34.326Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
