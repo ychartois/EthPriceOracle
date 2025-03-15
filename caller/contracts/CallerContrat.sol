@@ -15,6 +15,11 @@ contract CallerContract is Ownable{
     event ReceivedNewRequestIdEvent(uint256 id);
     event PriceUpdatedEvent(uint256 ethPrice, uint256 id);
 
+    modifier onlyOracle() {
+      require(msg.sender == oracleAddress, "You are not authorized to call this function.");
+      _;
+    }
+
     function setOracleInstanceAddress(address _oracleInstanceAddress) public onlyOwner {
         oracleAddress = _oracleInstanceAddress;
         oracleInstance = EthPriceOracleInterface(oracleAddress);
@@ -27,7 +32,7 @@ contract CallerContract is Ownable{
         emit ReceivedNewRequestIdEvent(id);
     }
 
-    function callback(uint256 _ethPrice, uint256 _id) public {
+    function callback(uint256 _ethPrice, uint256 _id) public onlyOracle {
         require(myRequests[_id], "This request is not in my pending list.");
         ethPrice = _ethPrice;
         delete myRequests[_id];
