@@ -38,3 +38,29 @@ async function addRequestToQueue (event) {
     const id = event.returnValues.id
     pendingRequests.push({ callerAddress, id })
 }
+
+async function processQueue(oracleContract, ownerAddress) {
+	let processedRequests  = 0;
+	while (pendingRequests.length > 0 && processedRequests < CHUNK_SIZE) {
+		const req = pendingRequests.shift();
+		await processRequest(oracleContract, ownerAddress, req.id, req.callerAddress);
+		processedRequests++;
+	}
+}
+
+async function processRequest(oracleContract, ownerAddress, id, callerAddress) {
+	let retries = 0;
+	while (retries < MAX_RETRIES) {
+		try {
+			const ethPrice = await retrieveLatestEthPrice();
+			await setLatestEthPrice(oracleContract, callerAddress, ownerAddress, ethPrice, id);
+			return;
+		} catch (error) {
+			if (retries === MAX_RETRIES - 1) {
+				await setLatestEthPrice(oracleContract, callerAddress, ownerAddress, '0', id);
+				return;
+			}
+			retries++;
+		}
+	}
+}
